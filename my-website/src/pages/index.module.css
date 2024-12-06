@@ -21,3 +21,32 @@
   align-items: center;
   justify-content: center;
 }
+
+/**
+ * удалить все что ниже если не заработает)
+ */
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Начальное положение шарика */
+  animation: roll 5s infinite linear; /* Анимация катящегося шарика */
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(1500%); /* Конечное положение шарика */
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

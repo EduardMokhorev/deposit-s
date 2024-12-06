@@ -12,6 +12,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
+        <div className={styles.ball}></div> {/* Добавляем элемент шарика */}
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -20,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Читать
           </Link>
         </div>
       </div>

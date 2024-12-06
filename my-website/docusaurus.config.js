@@ -25,11 +25,11 @@ blog: false - можешь отключить блог
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Сервис предоставления депозитов',
+  tagline: 'жми на кнопку, читай доку',
   favicon: 'img/favicon.ico',
   url: 'https://EduardMokhorev.github.io',
-  baseUrl: 'deposit-s',
+  baseUrl: '/deposit-s/',
   organizationName: 'EduardMokhorev', // Usually your GitHub org/user name.
   projectName: 'deposit-s', // Usually your repo name.
   onBrokenLinks: 'warn',
@@ -67,6 +67,20 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+    ], // подключаем плагин для OPENAPI
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            id: 'petstore',
+            spec: 'api_specs/openapi.yaml',
+          },
+        ],
+        theme: {
+          primaryColor: '#1890ff',
+        },
+      }
     ],
   ],
 
